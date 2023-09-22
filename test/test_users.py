@@ -13,7 +13,7 @@ user_id = 0
 
 
 # Generate random email id
-def generate_random_emailid():
+def generate_random_emailid() -> str:
     suffix = "@ktautomation.com"
     prefix = "".join(random.choice(string.ascii_lowercase) for _ in range(10))
     return f"{prefix}{suffix}"
@@ -78,9 +78,3 @@ def test_delete_request():
     print(res.status_code)
     print(".......... DELETED USER .........")
     assert res.status_code == 204
-
-
-# get_request()
-# user_id = post_request()
-# put_request(user_id)
-# delete_request(user_id)
